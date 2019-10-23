@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>    
 
-<or:order xmlns:or="https://www.mailhouse.com/order"
+<order xmlns:or="https://www.mailhouse.com/order"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="order.xsd"
           id="123456"
@@ -9,7 +9,7 @@
           currency="euro"
           paymentReference="123456" >  
 
-    <or:customer id="123645">   
+    <customer id="123645">   
         <name>Edoardo</name>
         <surname>Lenzi</surname> 
         <sex>male</sex> 
@@ -27,9 +27,9 @@
             <city>Trento</city>
             <state>Italy</state>
         </residence>      
-    </or:customer>  
+    </customer>  
 
-    <or:items>
+    <items>
         <item id="111534">
             <name>Honda radiator</name>
             <number>1</number>
@@ -47,15 +47,15 @@
             <currency>euro</currency>
             <description>Universal car cooling fluid, includes 1L of fluid and a funnel</description>
         </item>
-    </or:items>
+    </items>
 
-    <or:shipmentAddress>
+    <shipmentAddress>
         <street>Nautilusweg</street>
         <number>11/1</number>
         <zipCode>90200</zipCode>
         <city>Klagenfurt</city>
         <state>Austria</state>
         <notes>Ring at the bell and leave at reception</notes>
-    </or:shipmentAddress>  
+    </shipmentAddress>  
 
-</or:order>
+</order>
