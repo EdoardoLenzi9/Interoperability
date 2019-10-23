@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>   
+
+<or:order xmlns:or="https://www.mailhouse.com/order"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="order.xsd"
+          id="123456"
+          timestamp="2019-10-08T21:30:10Z"
+          total="1100.56"
+          currency="euro"
+          paymentReference="123456" >    
+
+    <or:customer id="123645">   
+        <name>FactoryMind S.C</name>
+        <physicalPerson>false</physicalPerson>
+        <fiscalCode>15689954785</fiscalCode>
+        <vatNumber> 12345678987 </vatNumber> 
+        <contacts>
+            <phone>3661234567</phone>
+            <email>info@factorymind.sc.com</email>
+        </contacts> 
+        <residence>
+            <street>Spini</street>
+            <number>141</number>
+            <zipCode>38046</zipCode>
+            <city>Gardolo</city>
+            <state>Italy</state>
+        </residence>      
+    </or:customer>  
+
+    <or:items>
+        <item id="111534">
+            <name>Asus Gaming PC</name>
+            <number>1</number>
+            <shipmentMethod>One-day shipment</shipmentMethod>
+            <price>1100.56</price>
+            <currency>euro</currency>
+            <description>Asus gaming pc with: 16GB RAM, Intel i7-7700HQ Processor, 1TB ssd, ...</description>
+        </item>
+    </or:items>
+
+    <or:shipmentAddress>
+        <street>Spini</street>
+        <number>141</number>
+        <zipCode>38046</zipCode>
+        <city>Gardolo</city>
+        <state>Italy</state>
+    </or:shipmentAddress>  
+
+</or:order>

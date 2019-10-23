@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>   
+
+<in:invoice xmlns:in="https://www.mailhouse.com/invoice"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation="invoice.xsd" 
+            id="123456"
+            orderId="123456"
+            timestamp="2019-10-09T06:30:10Z"
+            total="1100.56"
+            currency="euro" >   
+
+    <in:supplier id="123645">   
+        <name>AnotherCompany SPA</name>
+        <physicalPerson>false</physicalPerson>
+        <fiscalCode>14689954785</fiscalCode>
+        <vatNumber> 11145678987 </vatNumber> 
+        <contacts>
+            <phone>3651234567</phone>
+            <email>info@anothercompany.com</email>
+        </contacts> 
+        <residence>
+            <street>Birti</street>
+            <number>2/A</number>
+            <zipCode>38046</zipCode>
+            <city>Gardolo</city>
+            <state>Italy</state>
+        </residence>  
+    </in:supplier>  
+
+    <in:customer id="123645">   
+        <name>FactoryMind S.C</name>
+        <physicalPerson>false</physicalPerson>
+        <fiscalCode>15689954785</fiscalCode>
+        <vatNumber> 12345678987 </vatNumber> 
+        <contacts>
+            <phone>3661234567</phone>
+            <email>info@factorymind.sc.com</email>
+        </contacts> 
+        <residence>
+            <street>Spini</street>
+            <number>141</number>
+            <zipCode>38046</zipCode>
+            <city>Gardolo</city>
+            <state>Italy</state>
+        </residence>      
+    </in:customer>  
+
+    <in:items>
+        <item id="111534">
+            <name>Asus Gaming PC</name>
+            <number>1</number>
+            <shipmentMethod>One-day shipment</shipmentMethod>
+            <price>1100.56</price>
+            <currency>euro</currency>
+        </item>
+    </in:items>
+
+</in:invoice>

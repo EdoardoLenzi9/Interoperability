@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema targetNamespace="https://www.mailhouse.com/common_simple_types"
+           xmlns="https://www.mailhouse.com/common_simple_types"
+           elementFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+    <xs:simpleType name="boundedStringType">
+        <xs:restriction base="xs:token">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="amountType">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sexType"> 
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="male"/>
+            <xs:enumeration value="female"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="currencyType"> 
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="euro"/>
+            <xs:enumeration value="dollar"/>
+            <xs:enumeration value="yen"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="shipmentMethodType"> 
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ordinary shipment"/>
+            <xs:enumeration value="Express shipment"/>
+            <xs:enumeration value="One-day shipment"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fiscalCodeType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]|[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="vatNumberType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[0-9]{11}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="[^@]+@[^.]+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:int">
+            <xs:maxInclusive value="999999"/>
+            <xs:minExclusive value="99999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phoneType">
+        <xs:restriction base="xs:long">
+            <xs:maxInclusive value="9999999999"/>
+            <xs:minExclusive value="999999999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="zipCodeType">
+        <xs:restriction base="xs:int">
+            <xs:maxInclusive value="99999"/>
+            <xs:minExclusive value="9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>        
+
+<in:invoice xmlns:in="https://www.mailhouse.com/invoice"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation="invoice.xsd" 
+            id="123456"
+            orderId="123456"
+            timestamp="2019-10-09T06:30:10Z"
+            total="120.43"
+            currency="euro" >   
+
+    <in:supplier id="223645">   
+        <name>Petra</name>
+        <surname>Fox</surname> 
+        <sex>female</sex> 
+        <physicalPerson>true</physicalPerson>
+        <fiscalCode>PTRFXX97T02L356Q</fiscalCode>
+        <vatNumber> 12345678987 </vatNumber> 
+        <contacts>
+            <phone>3455656623</phone>
+            <email>petrafox@yahoo.at</email>
+        </contacts> 
+        <residence>
+            <street>Universitatstrasse</street>
+            <number>11/5</number>
+            <zipCode>90565</zipCode>
+            <city>Villach</city>
+            <state>Austria</state>
+        </residence>      
+    </in:supplier>  
+
+    <in:customer id="123645">   
+        <name>Edoardo</name>
+        <surname>Lenzi</surname> 
+        <sex>male</sex> 
+        <physicalPerson>true</physicalPerson>
+        <fiscalCode>LNZDRD96T02L356Q</fiscalCode>
+        <vatNumber> 12345678987 </vatNumber> 
+        <contacts>
+            <phone>3471234567</phone>
+            <email>edoardolenzi9@gmail.com</email>
+        </contacts> 
+        <residence>
+            <street>Nautilusweg</street>
+            <number>11/1</number>
+            <zipCode>90200</zipCode>
+            <city>Klagenfurt</city>
+            <state>Austria</state>
+        </residence>      
+    </in:customer>  
+
+    <in:items>
+        <item id="111534">
+            <name>Honda radiator</name>
+            <number>1</number>
+            <shipmentMethod>Ordinary shipment</shipmentMethod>
+            <price>110.43</price>
+            <currency>euro</currency>
+        </item>
+        <item id="122129">
+            <name>Green radiator fluid 1L</name>
+            <number>4</number>
+            <shipmentMethod>Express shipment</shipmentMethod>
+            <notes>Please send it to me as soon as possible because I have urgency</notes>
+            <price>10.00</price>
+            <currency>euro</currency>
+        </item>
+    </in:items>
+
+</in:invoice>

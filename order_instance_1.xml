@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>    
+
+<or:order xmlns:or="https://www.mailhouse.com/order"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="order.xsd"
+          id="123456"
+          timestamp="2019-10-08T21:30:10Z"
+          total="120.43"
+          currency="euro"
+          paymentReference="123456" >  
+
+    <or:customer id="123645">   
+        <name>Edoardo</name>
+        <surname>Lenzi</surname> 
+        <sex>male</sex> 
+        <physicalPerson>true</physicalPerson>
+        <fiscalCode>LNZDRD96T02L356Q</fiscalCode>
+        <vatNumber> 12345678987 </vatNumber> 
+        <contacts>
+            <phone>3471234567</phone>
+            <email>edoardolenzi9@gmail.com</email>
+        </contacts> 
+        <residence>
+            <street>Tofane</street>
+            <number>11</number>
+            <zipCode>38122</zipCode>
+            <city>Trento</city>
+            <state>Italy</state>
+        </residence>      
+    </or:customer>  
+
+    <or:items>
+        <item id="111534">
+            <name>Honda radiator</name>
+            <number>1</number>
+            <shipmentMethod>Ordinary shipment</shipmentMethod>
+            <price>110.43</price>
+            <currency>euro</currency>
+            <description>Car radiator compatible with every Honda model until 2010</description>
+        </item>
+        <item id="122129">
+            <name>Green radiator fluid 1L</name>
+            <number>4</number>
+            <shipmentMethod>Express shipment</shipmentMethod>
+            <notes>Please send it to me as soon as possible because I have urgency</notes>
+            <price>10.00</price>
+            <currency>euro</currency>
+            <description>Universal car cooling fluid, includes 1L of fluid and a funnel</description>
+        </item>
+    </or:items>
+
+    <or:shipmentAddress>
+        <street>Nautilusweg</street>
+        <number>11/1</number>
+        <zipCode>90200</zipCode>
+        <city>Klagenfurt</city>
+        <state>Austria</state>
+        <notes>Ring at the bell and leave at reception</notes>
+    </or:shipmentAddress>  
+
+</or:order>

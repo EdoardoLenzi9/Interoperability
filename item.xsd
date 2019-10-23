@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema targetNamespace="https://www.mailhouse.com/item"
+           xmlns="https://www.mailhouse.com/item"
+           elementFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:cst="https://www.mailhouse.com/common_simple_types" >
+
+    <xs:import namespace="https://www.mailhouse.com/common_simple_types" schemaLocation="common_simple_types.xsd"/>
+
+    <xs:complexType name="baseItemType">
+        <xs:sequence>
+            <xs:element name="name" type="cst:boundedStringType"/>
+            <xs:element name="number" type="xs:int"/>
+            <xs:element name="shipmentMethod" type="cst:shipmentMethodType"/>
+            <xs:element name="notes" type="xs:string" minOccurs="0"/>
+            <xs:element name="price" type="cst:amountType"/>
+            <xs:element name="currency" type="cst:currencyType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="cst:idType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="orderItemType">
+        <xs:complexContent mixed="false">
+            <xs:extension base="baseItemType">
+                <xs:sequence>
+                    <xs:element name="description" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="invoiceItemsType">
+        <xs:sequence>
+            <xs:element name="item" type="baseItemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="orderItemsType">
+        <xs:sequence>
+            <xs:element name="item" type="orderItemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+        
+</xs:schema>

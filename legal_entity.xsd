@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema targetNamespace="https://www.mailhouse.com/legal_entity"
+           xmlns="https://www.mailhouse.com/legal_entity"
+           elementFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:cst="https://www.mailhouse.com/common_simple_types" >
+
+    <xs:import namespace="https://www.mailhouse.com/common_simple_types" schemaLocation="common_simple_types.xsd"/>
+
+    <xs:complexType name="legalEntityType">
+        <xs:sequence>
+            <xs:element name="name" type="cst:boundedStringType"/>
+            <xs:element name="surname" type="cst:boundedStringType" minOccurs="0"/>
+            <xs:element name="sex" type="cst:sexType" minOccurs="0"/>
+            <xs:element name="physicalPerson" type="xs:boolean"/>
+            <xs:element name="fiscalCode" type="cst:fiscalCodeType"/>
+            <xs:element name="vatNumber" type="cst:vatNumberType"/>
+            <xs:element name="contacts" type="contactType"/>
+            <xs:element name="residence" type="addressType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="cst:idType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="contactType">
+        <xs:sequence>
+            <xs:element name="phone" type="cst:phoneType"/>
+            <xs:element name="email" type="cst:emailType"/>
+            <xs:element name="fax" type="cst:phoneType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addressType">
+        <xs:sequence>
+            <xs:element name="street" type="cst:boundedStringType"/>
+            <xs:element name="number" type="cst:boundedStringType"/>
+            <xs:element name="zipCode" type="cst:zipCodeType"/>
+            <xs:element name="city" type="cst:boundedStringType"/>
+            <xs:element name="state" type="cst:boundedStringType"/>
+            <xs:element name="notes" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
