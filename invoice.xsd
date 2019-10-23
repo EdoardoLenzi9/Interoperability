@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema targetNamespace="https://www.mailhouse.com/invoice"
-           xmlns="https://www.mailhouse.com/invoice"
+<xs:schema xmlns="https://www.mailhouse.com/invoice"
            elementFormDefault="unqualified"
            xmlns:xs="http://www.w3.org/2001/XMLSchema" 
            xmlns:le="https://www.mailhouse.com/legal_entity"
@@ -18,16 +17,12 @@
                 <xs:element name="customer" type="le:legalEntityType" form="qualified"/>
                 <xs:element name="items" type="it:invoiceItemsType" form="qualified"/>
             </xs:sequence>
-            <xs:attributeGroup ref="invoicePropertiesGroup" />
+            <xs:attribute name="id" type="cst:idType" use="required"/>
+            <xs:attribute name="orderId" type="cst:idType" use="required"/>
+            <xs:attribute name="timestamp" type="xs:dateTime" use="required"/>
+            <xs:attribute name="total" type="cst:amountType" use="required"/> 
+            <xs:attribute name="currency" type="cst:currencyType" use="required"/>
         </xs:complexType>
     </xs:element>
-
-    <xs:attributeGroup name="invoicePropertiesGroup">
-        <xs:attribute name="id" type="cst:idType" use="required"/>
-        <xs:attribute name="orderId" type="cst:idType" use="required"/>
-        <xs:attribute name="timestamp" type="xs:dateTime" use="required"/>
-        <xs:attribute name="total" type="cst:amountType" use="required"/> 
-        <xs:attribute name="currency" type="cst:currencyType" use="required"/>
-    </xs:attributeGroup>
     
 </xs:schema>
